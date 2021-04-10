@@ -3,7 +3,7 @@ The code is neither clean nor in any way beautiful....
 
 Following classes are provided:
 
-###RDFDatabaseInitializer
+### RDFDatabaseInitializer
 
 Reads the template file test.ttl.template and substitutes the variables within ${} by randomized values.
 The so instantiated turtle representation is persisted in a Fuseki store expected to run at http://localhost:3031/ds
@@ -13,7 +13,7 @@ The number of samples generated is controlled by a command line parameter.
 From project root run with: 
 ` mvn exec:java -Dexec.mainClass="RDFDatabaseInitializer" -Dexec.args="<nr of samples>"` 
 
-###QueryBench
+### QueryBench
 Runs a query benchmark against a specified SPARQL endpoint.
 It reads 10000 ids from the database and then randomly samples from this list ids. For each sampled id a query is submitted retrieving all triples defined for that id.
 That approach minimizes that the test will be influenced by caching.
@@ -25,11 +25,11 @@ From the command line the number of threads and the test execution time can be c
 runs the test with 10 threads for 30 seconds against the SPARQL endpoint http://localhost:3031/ds
 Metrics are appended to the CSV file results.csv
 
-###RDFQuery
+### RDFQuery
 Executes hard coded SPARQL queries against the SPARQL endpoint http://localhost:3031/ds
 `mvn exec:java -Dexec.mainClass="RDFQuery" `
 
-###Results from running some performance tests
+### Results from running some performance tests
 
 I performed some benchmarks with rdf-delta an "extension" to Apache Fuseki facilating a HA setup for Fuseki.
 The documentation and link to the Git repo is available here: https://afs.github.io/rdf-delta/
