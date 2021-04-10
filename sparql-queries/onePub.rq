@@ -1,0 +1,18 @@
+prefix dcat: <http://www.w3.org/ns/dcat#>
+prefix dct: <http://purl.org/dc/terms/>
+prefix foaf: <http://xmlns.com/foaf/0.1/> 
+prefix dcat: <http://www.w3.org/ns/dcat#> 
+prefix dcatde: <http://dcat-ap.de/def/dcatde/> 
+
+CONSTRUCT {
+   ?id ?prop ?val .
+   ?child ?childProp ?childPropVal . 
+   ?someSubj ?incomingChildProp ?child .
+}
+WHERE {
+    ?id dct:identifier "bea8e131-9b1f-4cc4-a191-2f88dd766920" .
+    ?id ?prop ?val ;
+         (dct:accrualPeriodicity|!dct:accrualPeriodicity)+ ?child . 
+     ?child ?childProp ?childPropVal.
+     ?someSubj ?incomingChildProp ?child. 
+}

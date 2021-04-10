@@ -1,0 +1,40 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://portal.dih.telekom.net/dataset/${id}> a dcat:Dataset ;
+    dcatde:maintainer [ a foaf:Organization ;
+            foaf:mbox "${mail}" ;
+            foaf:name "${name}" ] ;
+    dct:creator [ a foaf:Organization ;
+            foaf:mbox "${org_mail}" ;
+            foaf:name "${org_name}" ] ;
+    dct:description "${description}" ;
+    dct:identifier "${id}" ;
+    dct:issued "2019-11-19T18:22:40.445623"^^xsd:dateTime ;
+    dct:modified "2019-11-19T18:22:46.423178"^^xsd:dateTime ;
+    dct:publisher <https://portal.dih.telekom.net/organization/0f5e2059-3626-4e8a-981b-079bee1281f7> ;
+    dct:temporal [ a dct:PeriodOfTime ;
+            schema:endDate "2019-10-28T05:31:46.742000"^^xsd:dateTime ;
+            schema:startDate "2019-05-30T00:57:53.506000"^^xsd:dateTime ] ;
+    dct:title "${description}" ;
+    owl:versionInfo "2" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "${name}" ;
+            vcard:hasEmail <${mail}> ] ;
+    dcat:theme "${theme}" ;
+    

@@ -1,0 +1,4 @@
+prefix dcat: <http://www.w3.org/ns/dcat#> 
+
+SELECT (COUNT(?x) AS ?cnt) WHERE { ?x  a dcat:Dataset }
+LIMIT 10
