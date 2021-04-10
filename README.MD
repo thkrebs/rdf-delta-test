@@ -49,10 +49,10 @@ The file result.csv in resources contains the results from a number of test runs
 
 Test results and 99% percentile latency for 250.000 triples
 ![Throughput and for 250000 triples](resources/results_250k.png "Throughpt for 250.000 triples")
-Max throughput is reached at arond 500 queries / second with a 20ms latency 
+Max throughput is reached at arond 500 queries / second with a 20ms (99% percentile) and 13ms (50% percentile) latency 
 
 Test results 99% percentile latency for 1.000.000 triples
 ![Throughput and for 1Mio triples](resources/results_1m.png "Throughpt for 1M triples")
-Max throughput is reached at around 290 queries / sec with a 99% latency of aroung 32msecs.
+Max throughput is reached at around 290 queries / sec with a 99% percentile latency of aroung 32msecs and a 50% percentile latency of 15ms 50% .
 
 
