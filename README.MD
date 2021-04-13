@@ -29,6 +29,10 @@ Metrics are appended to the CSV file results.csv
 Executes hard coded SPARQL queries against the SPARQL endpoint http://localhost:3031/ds
 `mvn exec:java -Dexec.mainClass="RDFQuery" `
 
+### RDFValueList
+Code snippet demonstrate how a localized list of values can be constructed from value lists using SKO vocabulary.
+
+
 ### Results from running some performance tests
 
 I performed some benchmarks with rdf-delta an "extension" to Apache Fuseki facilating a HA setup for Fuseki.
